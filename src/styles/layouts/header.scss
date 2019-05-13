@@ -1,0 +1,331 @@
+.header{
+    position: relative;
+    box-shadow: 0px 1px 12px rgba(0, 0, 0, 0.3);
+    @media (max-width:1200px) {
+        height: 80px;
+     } 
+
+    .contain-global{
+        height: auto;
+    }
+    &__icon{
+        position: absolute;
+        right: 120px;
+        z-index: 2;
+        top: calc(100% + 50px);
+        @media (max-width:1200px) {
+            right: 15px;
+        } 
+        @media (max-width:992px) {
+            top: calc(100% + 10px);
+        } 
+    }
+    &__bg{
+        height: 130px;
+        position: relative;
+        overflow: hidden;
+        background-image: url('../assets/images/bg-header.png');
+        background-size: cover;
+        @media (max-width:1200px) {
+           height: 80px;
+           position: fixed;
+           width: 100%;
+           z-index: 99;
+           box-shadow: 0px 1px 12px rgba(0, 0, 0, 0.3);
+        } 
+        img{
+            width: 100%;
+        }
+    }
+    &__toggle-icon{
+        display: none;
+        position: absolute;
+        right: 15px;
+        top: 30px;
+        cursor: pointer;
+        z-index: 2;
+        @media (max-width:1200px) {
+           display: block;
+           z-index: 100;
+           position: fixed
+         }
+        .fa{
+            font-size: 25px
+        }
+        .fa-window-close{
+            display: none
+        }
+        &.active{
+            .fa-bars{
+                display: none
+            }
+            .fa-window-close{
+                display: block
+            }
+
+        }
+        
+    }
+    &__content{
+        @media (min-width:992px) {
+            .contain-global{
+                width: 100%;
+                padding-left: 30px;
+                padding-right: 30px;
+            }
+         }
+        
+
+        @media (min-width:1200px) {
+            .contain-global{
+                width: 100%;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+        }
+        @media (min-width:1500px) {
+            .contain-global{
+                width: 1400px;
+            }
+        }
+        @media (min-width: 1600px) {
+            
+            .contain-global{
+                width: 1520px;
+            }
+        }
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        top: 100px;
+        z-index: 1;
+        width: 100%;;
+        
+        @media (max-width:1200px) {
+            position: static;
+            transform: none;
+        } 
+         
+        @media (max-width:992px) {
+           .contain-global{
+               width: 100%
+           }
+        } 
+    }
+
+    &__logo{
+        max-width: 200px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 30px;
+        @media (max-width:1600px) {
+            max-width: 180px;
+        }
+        @media (max-width:1200px) {
+           margin-left: 20px;
+           padding-top: 15px;
+           padding-bottom: 15px;
+           max-width: 135px;
+        } 
+        
+        img{
+            width: 100%;
+        }
+    }
+    &__nav{
+        @media (max-width:1200px) {
+            height: 100%;
+            z-index: 99;
+            background-color: #ffd88c;
+            right: 0;
+            position: fixed;
+            width: 50%;
+            height: 100%;
+            transform: translateX(100%);
+            -moz-transform: translateX(100%);
+            -o-transform: translateX(100%);
+            -webkit-transform: translateX(100%);
+            transition: all 0.5s;
+            padding-top: 70px;
+            &.active{
+                transform: translateX(0);
+                -moz-transform: translateX(0);
+                -o-transform: translateX(0);
+                -webkit-transform: translateX(0);
+            }
+        } 
+        @media (max-width:400px) {
+            width: 70%;
+        } 
+        
+        &--item{
+            
+        }
+        &--item-child{
+            background-color: #ffdc00;
+            border-radius: 30px;
+            padding-left:30px;
+            padding-right: 30px;
+            box-shadow: 0px 1px 12px rgba(0, 0, 0, 0.3);
+            position: relative;
+            z-index: 2;
+            @media (max-width:1350px) {
+                padding-left:20px;
+                padding-right: 20px;
+                 
+            }
+            
+            @media (max-width:1200px) {
+                background-color: transparent;
+                border-radius: 0;
+                padding-left:0;
+                padding-right: 0;
+                box-shadow: none;
+                float: none;
+                margin-bottom: 0
+            }
+            li{
+                display: inline;
+                a{
+                    color:#7c5723;
+                    font-size: 18px;
+                    font-family: 'Gotham-Book';
+                    padding: 15px 20px;
+                    display: inline-block;
+                    // @media (max-width:1350px) {
+                    //     padding: 15px 10px;
+                         
+                    // }
+                    @media (max-width:1200px) {
+                        padding: 15px 5px;
+                        display: block;
+                        background-color: #ffd88c;
+                        color: #25205f;
+                        text-align: left;
+                        padding-left: 30px;
+                    }
+                }
+            }
+        }
+
+        &--product{
+            background-color: #fff;
+            border-radius: 0 0 20px 20px;
+            position: absolute;
+            padding-left: 13px;
+            z-index: 1;
+            padding-right: 13px;
+            padding-top: 36px;
+            box-shadow: 0px 1px 12px rgba(0, 0, 0, 0.3);
+            transition: all .5s;
+            width: 100%;
+            bottom: -55px;
+            display: none;
+            @media (max-width:1200px) {
+                position: static;
+                background-color: transparent;
+                border: none;
+                border-radius: unset;
+                box-shadow: none;
+                padding-top: 0;
+                padding-left: 30px;
+            }
+            
+            &.active{
+                &.pc{
+                    display: block;
+                    @media (max-width:1200px) {
+                        display: none
+                    }
+                }
+                &.mobile{
+                    display: none;
+                    @media (max-width:1200px) {
+                        display: block
+                    }
+                }
+            }
+           
+            li{
+                position: relative;
+                display: inline;
+                &::before{
+                    position: absolute;
+                    height:30px;
+                    width: 1px;
+                    content: '';
+                    background-color:  #7c5723;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    -moz-transform: translateY(-50%);
+                    -o-transform: translateY(-50%);
+                    -webkit-transform: translateY(-50%);
+                    @media (max-width:1200px) {
+                        position: static;
+                    }
+                }
+                a{
+                    font-size: 18px;
+                    font-family: 'Gotham-Book';
+                    padding: 15px 18px;
+                    display: inline-block;
+                    color: #7c5723;
+                    @media (max-width:1200px) {
+                        display: block;
+                        text-align: left;
+                        color: #25205f;
+                        padding: 10px 18px;
+                    }
+                }
+                &:first-child{
+                    &::before{
+                        position: static;
+                        
+                    }
+                }
+            }
+          
+        }
+
+        &--left{
+            float: left;
+            position: relative;
+            z-index: 2;
+            @media (max-width:1200px) {
+                width: 100%;
+            }
+        }
+        &--right{
+            float: right;
+            @media (max-width:1200px) {
+                width: 100%;
+            }
+            li{
+                a{
+                    padding: 15px 10px;
+                    @media (max-width:1200px) {
+                        padding: 15px 5px;
+                        text-align: left;
+                        padding-left: 30px;
+                    }
+                }
+            }
+        }
+    }
+    .hover-product{
+        cursor: pointer;
+        &.active{
+            .fa{
+                transform: rotate(180deg);
+            }
+        }
+        .fa{
+            display: inline-block;
+            transition: all 0.2s
+        }
+    }
+
+}

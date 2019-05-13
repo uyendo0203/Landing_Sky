@@ -1,0 +1,56 @@
+.footer, .footer--1{
+    padding-left: 150px;
+    padding-top: 70px;
+    padding-bottom: 65px;
+    @media(max-width: 992px){
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    &__table{
+        max-width: 270px;
+        float: left;
+        @media(max-width: 768px){
+            float: none;
+            width: 100%;
+            max-width: 100%;
+        }
+        td{
+            vertical-align: text-top;
+            padding: 2px 0
+        }
+        th{
+            padding-bottom: 20px;
+            @media(max-width: 768px){
+                padding-bottom: 10px;
+            }
+        }
+        td, th{
+            color:#7c5723;
+            font-family: 'Gotham-Book';
+        }
+        a{
+            color:#7c5723;
+        }
+    }
+    .table-1{
+
+    }
+    .table-2{
+        margin-left: 45px;
+        @media(max-width: 768px){
+            margin-left: 0;
+            margin-top: 20px;
+        }
+    }
+}
+
+.footer--1{
+    background-color: #ffd88c;
+    background-image: url('../assets/images/footer-bg.jpg');
+    background-size: 100% 100%;
+    @media(max-width: 992px){
+        background-position-x:center ;
+        background-size: cover;
+    }
+
+}

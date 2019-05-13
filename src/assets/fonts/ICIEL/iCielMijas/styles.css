@@ -1,0 +1,8 @@
+
+@font-face {
+  font-family: 'iCielMijas';
+  src: url('iCielMijas.eot?#iefix') format('embedded-opentype'),  url('iCielMijas.otf')  format('opentype'),
+	     url('iCielMijas.woff') format('woff'), url('iCielMijas.ttf')  format('truetype'), url('iCielMijas.svg#iCielMijas') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
