@@ -43,39 +43,7 @@ ul{
     list-style: none
 }
 
-.btn-buynow{
-    max-width: 200px;
-    width: 100%;
-    border-radius: 30px;
-    margin-top: 40px;
-    margin-bottom: 30px;
-    border:3px solid #fff;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    font-family: 'Gotham-Bold';
-    background-color: #ffdc00;
-    position: relative;
-    box-shadow: 1px 5px 3px rgba(0, 0, 0, 0.3);    
-    &:hover{
-        text-decoration: none
-    }
-    span{
-        color: #7c5723;
-        font-size: 16pt;
-        background-color: #ffdc00;
-        border-radius: 30px;
-        border: 3px solid #7d5825;
-        display: block;
-        height: 50px;
-        transition: all 0.2s;
-        &:hover{
-            background-color: #fff;
-        }
-    }
 
-
-}
 .slider{
     position: relative;
     border: 6px solid transparent;
@@ -106,6 +74,9 @@ ul{
         -o-transform: translateX(-50%);
         -webkit-transform: translateX(-50%);
         bottom: 40px;
+        @media(max-width:992px){
+            bottom: 15px;
+        }
         li{
             display: inline-block;
             transition: all 0.2s;

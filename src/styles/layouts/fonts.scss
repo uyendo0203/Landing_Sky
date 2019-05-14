@@ -14,12 +14,24 @@
 .font-Black {
     font-family: 'Roboto-Black';
 }
+.font-SFUHelveticaCondensedBlack {
+    font-family: 'SFUHelveticaCondensedBlack';
+}
 
 
 
 /*
 	path for fonts
 */
+@font-face {
+    font-family: 'SFUHelveticaCondensedBlack';
+    src: url('../assets/fonts/SFUHelveticaCondensedBlack/SFUHelveticaCondensedBlack.eot?#iefix') format('embedded-opentype'),  
+        url('../assets/fonts/SFUHelveticaCondensedBlack/SFUHelveticaCondensedBlack.woff') format('woff'), 
+        url('../assets/fonts/SFUHelveticaCondensedBlack/SFUHelveticaCondensedBlack.ttf')  format('truetype'), 
+        url('../assets/fonts/SFUHelveticaCondensedBlack/SFUHelveticaCondensedBlack.svg#Roboto-Black') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
 @font-face {
     font-family: 'Roboto-Black';
     src: url('../assets/fonts/roboto/Roboto-Black/Roboto-Black.eot?#iefix') format('embedded-opentype'),  

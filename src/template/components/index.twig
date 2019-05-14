@@ -30,19 +30,19 @@
                     </ul>
                     <ul class="landing-sky__menu menu-list">
                         <li>
-                            <a link="scroll_1" class="active" href="#">GIỚI THIỆU</a>
+                            <a link="scroll_2" href="#">GIỚI THIỆU</a>
                         </li>
                         <li>
-                            <a link="scroll_2" href="#">THỰC ĐƠN</a>
+                            <a link="scroll_3" href="#">THỰC ĐƠN</a>
                         </li>
                         <li>
-                            <a link="scroll_3" href="#">KHUYẾN MÃI</a>
+                            <a link="scroll_4" href="#">KHUYẾN MÃI</a>
                         </li>
                         <li>
-                            <a link="scroll_4" href="#">ĐẶT BÀN</a>
+                            <a link="scroll_5" href="#">ĐẶT BÀN</a>
                         </li>
                         <li>
-                            <a link="scroll_5" href="#">LIÊN HỆ</a>
+                            <a link="scroll_6" href="#">LIÊN HỆ</a>
                         </li>
                     </ul>
                     
@@ -53,7 +53,7 @@
         </div>
     </div>
     <div class="landing-sky__contain">
-        <div class="section section1 scroll_1">
+        <div class="section section1">
             <div class="content">
                 <div class="slider slider-banner slider1">
                     <div class="item">
@@ -80,7 +80,7 @@
             </div>
         </div>
 
-        <div class="section section2 scroll_2">
+        <div class="section section2 scroll_active scroll_2">
             <div class="container">
                 <div class="row">
                     <div class="col-md-5">
@@ -132,9 +132,29 @@
             </div>
         </div>
         
-        <div class="section section3 scroll_3">
+        <div class="section section3 scroll_active scroll_3">
             <div class="container">
                 <div class="row">
+
+                    <div class="col-md-5 show-mobile">
+                        <div class="section__item section__item--left">
+                            <div class="section__title">thực đơn</div>
+                            <div class="section__description">
+                                <p>
+                                    NHÀ HÀNG SKY  Tọa Sơn Nhất NHÀ HÀNG SKY  Tọa lạc 
+                                    tại vị trí đắc địa gần sân bay Tân Sơn Nhất NHÀ HÀNG SKY  
+                                    Tọa lạc tại vị trí đắc địa gần sân bay Tân Sơn Nhất 
+                                </p>
+                                <p>
+                                    NHÀ HÀNG SKY  Tọa lạc tại vị trí đắc địa gần sân bay 
+                                    trí đắc địa gần sân bay Tân Sơn Nhất NHÀ HÀNG SKY  Tọa lạc tại 
+                                    vị trí đắc địa gần sân bay Tân Sơn Nhất NHÀ HÀNG SKY  Tọa lạc 
+                                    tại vị trí đắc địa gần sân bay Tân Sơn Nhất NHÀ HÀNG SKY  
+                                    Tọa lạc tại vị trí đắc địa gần sân bay Tân Sơn Nhất 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                     <div class="col-md-7">
                         <div class="section__item section__item--right">
                             <div class="section__slider">
@@ -155,7 +175,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-5">
+                    <div class="col-md-5 hide-mobile">
                         <div class="section__item section__item--left">
                             <div class="section__title">thực đơn</div>
                             <div class="section__description">
@@ -198,7 +218,7 @@
             </div>
         </div>
 
-        <div class="section section5 scroll_5">
+        <div class="section section5 scroll_active scroll_5">
             <div class="item">
                 <img src="./assets/images/section-5-img.jpg" alt="">
             </div>
@@ -250,11 +270,82 @@
             </div>
         </div>
 
-        <div class="section section7 scroll_7">
-            
+        <div class="section section7 scroll_active scroll_7">
+            <div class="container">
+                <div class="section__item">
+                    <div class="section__title">Đặt bàn</div>
+                    <div class="section__description">
+                        <p>
+                            Quý khách vui lòng đặt bàn theo biểu mẫu dưới đây,<br>
+                            Chúng tôi sẽ xác nhận thông tin đặt bàn theo yêu cầu của quý khách.<br>
+                            Hoặc để được tư vấn thông tin chi tiết, quý khách vui lòng liên hệ hotline: <a class="phone" href="#">0909022885</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="row section__form-book">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Họ tên:">
+                        </div>
+                        <div class="form-group">
+                            <input type="number" class="form-control" placeholder="Số điện thoại:">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Email:">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Ngày đến:">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Thời gian">
+                        </div>
+                        <div class="form-group">
+                            <input type="number" class="form-control" placeholder="Số lượng khách:">
+                        </div>
+                        
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <textarea name="" placeholder="Yêu cầu khác:" id="" cols="30"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <button class="btn book-now">Đặt bàn ngay</button>
+                </div>
+            </div>
         </div>
-        <div class="section section8 scroll_8">
-            
+
+        <div class="section section8 scroll_active scroll_8">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="logo-footer">
+                            <img src="./assets/images/logo-footer.png" alt="">
+                        </div>
+                    
+                        <div class="contact-info">
+                            <div class="title">THÔNG TIN LIÊN HỆ</div>
+                            <div class="address">
+                                <p class="sub-title">Nhà hàng SKY Restaurent</p>
+                                <p class="sub-des">Địa chỉ:202 Hoàng Văn Thụ, Phường 9, Quận Phú Nhuận, Hồ Chí Minh</p>
+                            </div>
+                            <div class="hotline">
+                                <p class="sub-title">Hotline:</p>
+                                <p class="sub-des">0909022885</p>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="col-md-7">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.141089749667!2d106.66862891480089!3d10.800504192305175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752928ca3214c7%3A0x2942d1fbced0c438!2zMjAyIEhvw6BuZyBWxINuIFRo4bulLCBQaMaw4budbmcgOSwgUGjDuiBOaHXhuq1uLCBI4buTIENow60gTWluaA!5e0!3m2!1sen!2s!4v1557849649492!5m2!1sen!2s" 
+                            height="480" frameborder="0" style="border:0" allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            </div>
         </div>
         
     </div>
