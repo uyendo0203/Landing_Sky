@@ -12,6 +12,19 @@
 		@media(max-width:992px){
 			box-shadow: 0px 1px 12px rgba(0, 0, 0, 0.3);
 		}
+
+		// &.active{
+		// 	.container{
+		// 		padding-left: 0;
+		// 		padding-right: 0
+		// 	}
+		// 	.landing-sky__logo{
+		// 		padding-left: 15px;
+		// 	}
+		// 	.menu-mobile{
+		// 		padding-right: 15px
+		// 	}
+		// }
 	}
 	&__logo{
 		display: inline-block;
@@ -33,13 +46,21 @@
 		width: calc(100% - 130px);
 		float: right;
 		@media(max-width:992px){
-			display: none;
 			width: 100%;
+
+			display: none;
+			transition: opacity 1s ease-out;
+			opacity: 0;
+
+			
 		}
 		&.active{
-			display: block
+			opacity: 1;
+			display: block;
+			
 		}
 	}
+
 
 	.menu-mobile{
 		display: none;
@@ -187,6 +208,10 @@
 			@media(max-width:992px){
 				margin-top: 20px;
 			}
+			@media(max-width:400px){
+				padding-left: 35px;
+				padding-right: 35px;
+			}
 			.slick-arrow{
 				height: 35px;
 				width: 35px;
@@ -194,6 +219,13 @@
 				border: 1px solid #0d5085;
 				background: #fff;
 				outline: none;
+				@media(max-width:400px){
+					height: 25px;
+					width: 25px;
+					img{
+						width: 100%;
+					}
+				}
 				&.slick-prev{
 					position: absolute;
 					top: 50%;
@@ -202,6 +234,9 @@
 					-moz-transform: translateY(-50%);
 					-o-transform: translateY(-50%);
 					-webkit-transform: translateY(-50%);
+					@media(max-width:400px){
+						left: -35px;
+					}
 				}
 				&.slick-next{
 					position: absolute;
@@ -211,6 +246,9 @@
 					-moz-transform: translateY(-50%);
 					-o-transform: translateY(-50%);
 					-webkit-transform: translateY(-50%);
+					@media(max-width:400px){
+						right: -35px;
+					}
 				}
 			}
 			.slick-dots{
@@ -473,7 +511,10 @@
 			width: 100%;
 		}
 		.col-md-7{
-			padding-right: 0
+			padding-right: 0;
+			@media(max-width:992px){
+				padding-right:15px;
+			}
 		}
 		.logo-footer{
 			max-width: 290px;
@@ -523,9 +564,16 @@
 					font-size: 32px;
 					margin-bottom: 25px;;
 				}
+				@media(max-width:992px){
+					padding-top: 25px;
+					margin-bottom: 10px;
+				}
 			}
 			.address{
 				margin-bottom: 30px;
+				@media(max-width:992px){
+					margin-bottom: 10px;
+				}
 			}
 			.hotline{}
 			.sub-title{

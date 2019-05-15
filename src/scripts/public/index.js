@@ -85,5 +85,19 @@ $(document).click(function (e) {
 /**menu mobile */
 $('.menu-mobile .navbar-toggler').click(function(e){
 	e.stopPropagation()
-	$('.landing-sky__menu-content').toggleClass('active')
+	$('.landing-sky__menu-content').toggleClass('active');
+
+	$('.landing-sky__header').toggleClass('active')
+
 })
+
+
+/**window resize and edit menu */
+// $(window).on('resize','load',function() {
+// 	if($(window).width() < 992 && $('.landing-sky__menu-content').hasClass('active')){
+// 		$('.landing-sky__header .container').css({
+// 			'padding-left':0,
+// 			'padding-right':0,
+// 		})
+// 	} 
+// });
