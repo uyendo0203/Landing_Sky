@@ -477,6 +477,14 @@
 			.form-group{
 				margin-bottom: 23px;
 			}
+			.tp{
+				width: 100%;
+				background-color: rgba(255, 255, 255, 0.65);
+			}
+			.tp_hr,.tp_min,.tp_am_pm{
+				width: 25px !important;
+				background-color: transparent
+			}
 		}
 		.book-now{
 			max-width: 195px;

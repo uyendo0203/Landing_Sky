@@ -1,3 +1,10 @@
+$( "#datepicker" ).datepicker({
+	dateFormat: "dd-mm-yy",
+    onSelect: function(dateText, inst) { 
+		console.log(dateText)
+    }
+});
+
 // HEADER CLICK AND SCROLL===========================================================================
 $('.menu-list li a').click(function () {
 	$('.menu-list li a').removeClass('active')
@@ -101,3 +108,8 @@ $('.menu-mobile .navbar-toggler').click(function(e){
 // 		})
 // 	} 
 // });
+
+$('#example').timepicker({
+	time: '12:00:00.000'
+});
+	
