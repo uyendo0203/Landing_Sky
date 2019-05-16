@@ -98,13 +98,7 @@
                                     tại vị trí đắc địa gần sân bay Tân Sơn Nhất NHÀ HÀNG SKY  
                                     Tọa lạc tại vị trí đắc địa gần sân bay Tân Sơn Nhất 
                                 </p>
-                                <p>
-                                    NHÀ HÀNG SKY  Tọa lạc tại vị trí đắc địa gần sân bay 
-                                    trí đắc địa gần sân bay Tân Sơn Nhất NHÀ HÀNG SKY  Tọa lạc tại 
-                                    vị trí đắc địa gần sân bay Tân Sơn Nhất NHÀ HÀNG SKY  Tọa lạc 
-                                    tại vị trí đắc địa gần sân bay Tân Sơn Nhất NHÀ HÀNG SKY  
-                                    Tọa lạc tại vị trí đắc địa gần sân bay Tân Sơn Nhất 
-                                </p>
+                               
                             </div>
                         </div>
                     </div>
@@ -220,7 +214,7 @@
 
         <div class="section section5 scroll_active scroll_5">
             <div class="item">
-                <img src="./assets/images/section-5-img.jpg" alt="">
+                <!-- <img src="./assets/images/section-5-img.jpg" alt=""> -->
             </div>
         </div>
 
@@ -300,8 +294,6 @@
                         </div>
                         <div class="form-group">
                             <input id="example" type="text" class="form-control"  placeholder="Thời gian">
-
-                            {# <input type="text" class="form-control" placeholder="Thời gian"> #}
                         </div>
                         <div class="form-group">
                             <input type="number" class="form-control" placeholder="Số lượng khách:">
@@ -315,7 +307,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <button class="btn book-now">Đặt bàn ngay</button>
+                    <button class="btn book-now hvr-shutter-out-horizontal" data-toggle="modal" data-target="#book-now">Đặt bàn ngay</button>
                 </div>
             </div>
         </div>
@@ -325,7 +317,9 @@
                 <div class="row">
                     <div class="col-md-5">
                         <div class="logo-footer">
-                            <img src="./assets/images/logo-footer.png" alt="">
+                            <div class="img">
+                                <img src="./assets/images/logo-footer.png" alt="">
+                            </div>
                         </div>
                     
                         <div class="contact-info">
@@ -350,5 +344,21 @@
             </div>
         </div>
         
+    </div>
+</div>
+
+<!-- Modal -->
+<div id="book-now" class="modal fade modal_book-now" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <div class="modal-body">
+                <p>Đặt bàn thành công! Chúng tôi sẽ liên hệ với bạn trong thời gian sớm nhất</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default hvr-buzz-out" data-dismiss="modal">Đóng</button>
+            </div>
+        </div>
     </div>
 </div>

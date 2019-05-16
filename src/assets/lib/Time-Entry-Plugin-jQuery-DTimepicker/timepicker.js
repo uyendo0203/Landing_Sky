@@ -109,7 +109,7 @@
 
 			that.picker = that.input.parent();
 
-			that.picker.append(that.hour).append(":").append(that.min).append(" ").append(that.ampm).append(" ");
+			that.picker.append('<label>Thời gian:</label>').append(that.hour).append(":").append(that.min).append(" ").append(that.ampm).append(" ");
 
 			that.spinnerDiv.append(that.spinUpBtn).append(that.spinDownBtn).appendTo(that.picker);
 		},
