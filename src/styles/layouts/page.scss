@@ -862,7 +862,7 @@
     .modal-body {
         text-align: center;
         padding-top: 50px;
-        padding-bottom: 30px;
+        padding-bottom: 10px;
     }
 
     .modal-content {
@@ -892,7 +892,7 @@
     }
 
     .modal-dialog {
-        width: 600px;
+        width: 400px;
         margin: 10% auto;
     }
 
@@ -901,11 +901,11 @@
         width: 30px;
         background-color: #fff;
         opacity: 1;
-        top: -22px;
-        right: -22px;
+        top: -11px;
+        right: -10px;
         position: absolute;
         border-radius: 50%;
-		outline: none;
+        outline: none;
 		
     }
 }
