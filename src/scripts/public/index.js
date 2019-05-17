@@ -117,9 +117,7 @@ $("#example").timepicker({
 
 /**set content center images */
 var heightSection2,heightSection3,heightSection6,heightSection8;
-$(window).resize(function () {
-	window.location.reload()
-});
+
 $(document).ready(function () {
 	heightSection2 = $(".section2 .container").innerHeight();
 	$(".section2 .col-md-5").height(heightSection2);
