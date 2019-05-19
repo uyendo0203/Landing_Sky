@@ -19,6 +19,13 @@ function goToByScroll(echo) {
 	);
 }
 
+$('.section1 .slider').click(function(e){
+	// Prevent a page reload when a link is pressed
+	e.preventDefault();
+	// Call the scroll function
+	goToByScroll($(this).attr("link"));
+})
+
 $(".menu-list li a").click(function (e) {
 	// Prevent a page reload when a link is pressed
 	e.preventDefault();
@@ -131,6 +138,11 @@ $(document).ready(function () {
 	heightSection8 = $(".section8 .container-fluid").innerHeight();
 	$(".section8 .contact-info").height(heightSection8);
 	$(".section8 .logo-footer").height(heightSection8);
+
+
+
+	$('.time-picker').append('<label for="">Thời gian:</label>')
+
 });
 
 
@@ -138,14 +150,6 @@ $(document).ready(function () {
 
 
 
-/**-----------parallax1 ------------------*/
 
-var initScrollTop = $(window).scrollTop();
 
-$('.section5').css({ "background-position-y": initScrollTop / 75 + "%" });
 
-$(window).scroll(function () {
-	var scrollTop = $(window).scrollTop();
-
-	$('.section5').css({ "background-position-y": scrollTop / 75 + "%" });
-});

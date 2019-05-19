@@ -310,6 +310,7 @@
 
     .section1 {
         .item {
+            cursor: pointer;
             img {
                 width: 100%;
             }
@@ -684,15 +685,29 @@
 
             .tp {
                 width: 100%;
+                padding: 0;
                 padding-left: 10px;
                 background-color: rgba(255, 255, 255, 0.65);
+                text-align: right;
+                padding-right: 10px;;
             }
+            .time-picker{
+                position: relative;
+                height: 43px;
 
+            }
             label {
                 color: #000;
                 font-size: 17px;
                 font-weight: normal;
                 font-family: "Roboto-Regular";
+                position: absolute;
+                padding-left: 10px;
+                top: 50%;
+                transform: translateY(-50%);
+                -moz-transform: translateY(-50%);
+                -o-transform: translateY(-50%);
+                -webkit-transform: translateY(-50%);
             }
 
             .tp_hr,
