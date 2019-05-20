@@ -89,7 +89,8 @@ ul{
                 width: 10px;
                 border-radius: 50%;
                 padding: 0;
-                outline: none
+                outline: none;
+                
             }
             &.slick-active{
                 button{
@@ -100,4 +101,48 @@ ul{
             }
         }
     }
+    .slick-arrow{
+        height: auto;
+        width: auto;
+        background: transparent;
+        border: none;
+        .fa{
+            color: #084e8f;
+            font-size: 28px;
+            height: 35px;
+            width: 35px;
+            border-radius: 50%;
+            display: block;
+            border: 1px solid;
+            @media (max-width: 400px) {
+                font-size: 22px;
+                height: 25px;
+                width: 25px;
+                margin-bottom: -2px
+            }
+            &::before{
+                display: block
+            }
+        }
+        &.slick-next{
+            .fa{
+                padding-left: 5px;
+                @media (max-width: 480px) {
+                    padding-left: 3px;
+                }
+            }
+        }
+        &.slick-prev{
+            .fa{
+                padding-right: 5px;
+                @media (max-width: 400px) {
+                    padding-right: 3px;
+                }
+            }
+        }
+    }
+}
+
+.wickedpicker__close:before {
+    font-size: 25px;
 }

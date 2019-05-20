@@ -86,9 +86,9 @@ $(".slider2")
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		prevArrow:
-			"<button type='button' class='slick-prev pull-left'><img src='./assets/images/arrow-left.jpg' ></button>",
+			"<button type='button' class='slick-prev pull-left'><i class='fa fa-caret-left' aria-hidden='true'></i></button>",
 		nextArrow:
-			"<button type='button' class='slick-next pull-right'><img src='./assets/images/arrow-right.jpg'></button>"
+			"<button type='button' class='slick-next pull-right'><i class='fa fa-caret-right' aria-hidden='true'></i></button>"
 	});
 
 /** 
@@ -140,8 +140,11 @@ $(document).ready(function () {
 	$(".section8 .logo-footer").height(heightSection8);
 
 
-
+	/**time-picker */
 	$('.time-picker').append('<label for="">Thời gian:</label>')
+	$('.timepicker').wickedpicker({
+		twentyFour: true
+	});
 
 });
 
