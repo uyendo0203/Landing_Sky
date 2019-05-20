@@ -756,7 +756,7 @@
             background-color: #ffcd34;
             position: relative;
             margin-bottom: 90px;
-
+            
             &:hover {
                 text-decoration: none;
                 color: #ffcd34;
@@ -918,6 +918,10 @@
     .modal-dialog {
         width: 400px;
         margin: 10% auto;
+        @media (max-width: 480px) {
+            width:80%;
+            margin: 20% auto;
+        }
     }
 
     .close {
@@ -930,6 +934,7 @@
         position: absolute;
         border-radius: 50%;
         outline: none;
+        z-index: 2;
 		
     }
 }
