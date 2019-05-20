@@ -140,12 +140,19 @@ $(document).ready(function () {
 	$(".section8 .logo-footer").height(heightSection8);
 
 
-	/**time-picker */
+	/**time-picker */	
+
+	$('.time-picker').change(function(){
+		$('.wickedpicker').css('width',$('.time-picker').width())
+	})
+
 	$('.time-picker').append('<label for="">Thời gian:</label>')
 	$('.timepicker').wickedpicker({
-		twentyFour: true
+		twentyFour: true,
+		title: "Chọn giờ",
 	});
 
+	
 });
 
 
