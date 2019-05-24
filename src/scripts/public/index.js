@@ -19,7 +19,7 @@ function goToByScroll(echo) {
 	);
 }
 
-$('.section1 .slider').click(function(e){
+$('.section1 .slider .item').click(function(e){
 	// Prevent a page reload when a link is pressed
 	e.preventDefault();
 	// Call the scroll function
