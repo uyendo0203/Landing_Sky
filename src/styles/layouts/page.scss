@@ -126,7 +126,7 @@
                         margin-left: 15px;
                         margin-right: 5px;
                         font-family: "Roboto-Bold";
-                        font-size: 18px;
+                        font-size: 17px;
                     }
                 }
             }
@@ -148,7 +148,7 @@
                 a {
                     padding: 30px 26px;
                     display: inline-block;
-                    font-size: 18px;
+                    font-size: 17px;
                     transition: all 0.2s;
                     color: #084e8f;
 
@@ -172,9 +172,14 @@
                     }
                 }
 
+                &:first-child {
+                    a {
+                        padding-left: 0;
+                    }
+                }
                 &:last-child {
                     a {
-                        padding-right: 0;
+                        // padding-right: 0;
                     }
                 }
             }
@@ -182,7 +187,7 @@
     }
 
     &__contain {
-        margin-top: 95px;
+        margin-top: 85px;
 
         @media (max-width: 992px) {
             margin-top: 60px;
