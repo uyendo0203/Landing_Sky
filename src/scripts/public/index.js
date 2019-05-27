@@ -78,7 +78,7 @@ $(".slider1")
 $(".slider2")
 	.not(".slick-initialized")
 	.slick({
-		dots: true,
+		dots: false,
 		arrows: true,
 		infinite: false,
 		autoplay: true,

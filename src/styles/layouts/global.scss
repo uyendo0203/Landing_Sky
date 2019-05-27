@@ -106,6 +106,7 @@ ul{
         width: auto;
         background: transparent;
         border: none;
+        outline: none;
         .fa{
             color: #084e8f;
             font-size: 28px;
@@ -121,7 +122,10 @@ ul{
                 margin-bottom: -2px
             }
             &::before{
-                display: block
+                display: block;
+                height: 100%;
+                width: 100%;
+                padding-top: 3px;
             }
         }
         &.slick-next{
