@@ -69,9 +69,11 @@ $(".slider1")
 	.slick({
 		dots: true,
 		arrows: false,
-		infinite: false,
+		infinite: true,
 		autoplay: true,
-		speed: 300,
+		speed: 500,
+		autoplaySpeed: 5000,
+		// fade:true,
 		slidesToShow: 1,
 		slidesToScroll: 1
 	});
@@ -80,9 +82,11 @@ $(".slider2")
 	.slick({
 		dots: false,
 		arrows: true,
-		infinite: false,
+		infinite: true,
 		autoplay: true,
-		speed: 300,
+		// fade:true,
+		speed: 500,
+		autoplaySpeed: 5000,
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		prevArrow:

@@ -789,8 +789,9 @@
             margin-left: auto;
             margin-right: auto;
             float: left;
-            width: 50%;
+            width: 45%;
             display: table;
+            margin-left: 20px;
 
             @media (max-width: 1440px) {
                 width: 75%;
@@ -800,6 +801,7 @@
                 padding-top: 20px;
                 height: auto !important;
                 display: block;
+                margin-left: auto;
             }
 
             @media (max-width: 768px) {
@@ -875,13 +877,15 @@
                 font-family: "Roboto-Black";
                 color: #15528f;
                 margin-bottom: 0;
-                font-size: 17px;
+                // font-size: 17px;
+                font-size: 20px;
             }
 
             .sub-des {
                 font-family: "Roboto-Light";
                 color: #15528f;
-                font-size: 17px;
+                // font-size: 17px;
+                font-size: 20px;
             }
         }
     }
