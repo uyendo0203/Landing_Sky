@@ -34,9 +34,11 @@ jobs:
         uses: actions/configure-pages@v2
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
+      - run: yarn
+      - run: yarn run build
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          # Upload entire repository
-          path: './dist'
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
       - name: Deploy to GitHub Pages
