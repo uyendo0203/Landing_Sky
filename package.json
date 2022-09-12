@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --open --config webpack.dev.js",
-    "build": "del /f/s/q dist > nul && webpack --config webpack.prod.js"
+    "build": "webpack --config webpack.prod.js"
   },
   "author": "",
   "license": "ISC",
