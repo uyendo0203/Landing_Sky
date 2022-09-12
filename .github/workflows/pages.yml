@@ -33,7 +33,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '12.x'
-      - run: yarn
+      - run: yarn clean-dist
       - run: yarn build
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
