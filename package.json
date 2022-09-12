@@ -3,11 +3,14 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "homepage": "https://github.com/uyendo0203/Landing_Sky/release",
   "scripts": {
     "start": "webpack-dev-server --open --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
     "clean-dist": "rimraf dist",
-    "clean-nm": "rimraf node_modules"
+    "clean-nm": "rimraf node_modules",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "author": "",
   "license": "ISC",
@@ -35,6 +38,7 @@
   "dependencies": {
     "angular": "^1.6.9",
     "angular-route": "^1.6.10",
+    "gh-pages": "^4.0.0",
     "jquery": "^3.4.0",
     "underscore": "^1.8.3"
   }

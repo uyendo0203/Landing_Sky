@@ -9,34 +9,34 @@ const fs = require("fs");
 const CssoWebpackPlugin = require('csso-webpack-plugin').default;
 
 
-function resolve (dir) {
+function resolve(dir) {
 	return path.join(__dirname, '.', dir)
 }
 
 // --------------------------------------------------template
 // Our function that generates our html plugins
-function generateHtmlPlugins (templateDir) {
+function generateHtmlPlugins(templateDir) {
 	// Read files in template directory
 	const templateFiles = fs.readdirSync(path.resolve(__dirname, templateDir))
 	return templateFiles.map(item => {
-	  // Split names and extension
-	  const parts = item.split('.')
-	  const name = parts[0]
-	  const extension = parts[1]
-	  // Create new HTMLWebpackPlugin with options
-	  return new HtmlWebpackPlugin({
-		filename: `${name}.html`,
-		template: path.resolve(__dirname, `${templateDir}/${name}.${extension}`)
-	  })
+		// Split names and extension
+		const parts = item.split('.')
+		const name = parts[0]
+		const extension = parts[1]
+		// Create new HTMLWebpackPlugin with options
+		return new HtmlWebpackPlugin({
+			filename: `${name}.html`,
+			template: path.resolve(__dirname, `${templateDir}/${name}.${extension}`)
+		})
 	})
 }
 const htmlPlugins = generateHtmlPlugins('./src/template/pages');
 
 // -------------------------------------------------- javascript
-function generateJavascript(templateDir){
+function generateJavascript(templateDir) {
 	var newItem = {};
 	// Read files in template directory
-	const templateFiles = fs.readdirSync(path.resolve(__dirname,templateDir))
+	const templateFiles = fs.readdirSync(path.resolve(__dirname, templateDir))
 	templateFiles.forEach(item => {
 		// Split names and extension
 		const parts = item.split('.')
@@ -52,30 +52,31 @@ const javascriptEntry = generateJavascript("./src/scripts/bootstrap");
 
 // --------------------------------------------- run command
 module.exports = {
-  	entry:javascriptEntry ,
-  	devtool : "eval",
+	entry: javascriptEntry,
+	devtool: "eval",
 	output: {
 		filename: 'scripts/[name].bundle.js',
-		path: path.resolve(__dirname, 'dist'),
+		path: path.resolve(__dirname, 'build'),
 		publicPath: "./"
 	},
 	resolve: {
-		extensions: ['.js', '.twig' , '.json'],
+		extensions: ['.js', '.twig', '.json'],
 		alias: {
-		  	'src': resolve('src'),
+			'src': resolve('src'),
 			'assets': resolve('src/assets'),
 			'lib': resolve('src/lib')
 		}
-	  },
+	},
 	module: {
-	    loaders: [
-			{ test: /\.(scss|css)?$/, loader: ExtractTextPlugin.extract({
-					publicPath:"/",
+		loaders: [
+			{
+				test: /\.(scss|css)?$/, loader: ExtractTextPlugin.extract({
+					publicPath: "/",
 					fallback: 'style-loader',
 					use: ['css-loader?url=false', 'sass-loader']
 				})
 			},
-			{ 
+			{
 				test: /\.js$/,
 				exclude: /node_modules/,
 				loader: 'babel-loader',
@@ -83,15 +84,15 @@ module.exports = {
 					presets: ['es2015']
 				}
 			},
-			{ 
-				test: /\.twig$/, 
+			{
+				test: /\.twig$/,
 				exclude: /node_modules/,
 				loader: 'twig-loader'
 			},
-			{ 
+			{
 				test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
-				loader:'file-loader',
-				options:{
+				loader: 'file-loader',
+				options: {
 					name: "[name].[hash].[ext]",
 					outputPath: './assets/images',
 				}
@@ -99,35 +100,35 @@ module.exports = {
 			{
 				test: /\.(mp4|webm|ogg|mp3|wav|flac|aac)(\?.*)?$/,
 				loader: 'file-loader',
-				options:{
+				options: {
 					name: "[name].[hash].[ext]",
 					outputPath: './assets/media'
 				}
-			  },
-			  {
+			},
+			{
 				test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
 				loader: 'file-loader',
-				options:{
+				options: {
 					name: "[name].[hash].[ext]",
 					outputPath: './assets/fonts',
-					publicPath:"../assets/fonts"
+					publicPath: "../assets/fonts"
 				}
-			  }
+			}
 		]
 	},
 	plugins: [
 		new webpack.ProvidePlugin({
-            $: "jquery",
+			$: "jquery",
 			jQuery: "jquery",
-			_:"underscore"
-        }),
+			_: "underscore"
+		}),
 		new ExtractTextPlugin({
 			filename: "styles/[name].bundle.css"
-		}),  
+		}),
 		new CopyWebpackPlugin([
 			{ from: './src/scripts/public', to: './scripts' }
 		]),
 		new CssoWebpackPlugin({ pluginOutputPostfix: 'min' })
-    ]
-	.concat(htmlPlugins)
+	]
+		.concat(htmlPlugins)
 };
